@@ -1,0 +1,77 @@
+.diamond_1 {
+    width:100px;
+    height:100px;
+    margin-right: 20px;
+    animation-name: floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    margin-left: 30px;
+    margin-top: 5px;
+}
+
+@keyframes floating{
+    from { transform: translate(0,  0px); }
+    65%  { transform: translate(0, 15px); }
+    to   { transform: translate(0, -0px); } 
+}
+.diamond_2 {
+    width:100px;
+    height:100px;
+    margin-right:20px;
+    animation-name: floating;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    margin-left: 30px;
+    margin-top: 5px;
+}
+.diamond_3 {
+    width:100px;
+    height:100px;
+    margin-right:20px;
+    animation-name: floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    margin-left: 30px;
+    margin-top: 5px;
+}
+.diamond_4 {
+    width:100px;
+    height:100px;
+    animation-name: floating;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    margin-left: 30px;
+    margin-top: 5px;
+}
+
+.flex_container {
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin-top: 20px;
+}
+.card {
+    align-items: center;
+    margin-top:20px;
+    
+}
+
+.card-deck {
+    align-items:center;
+    justify-content:center;
+}
+p{
+    font-family: 'Open Sans Condensed', sans-serif;
+
+}
+h3{
+    font-family: 'Open Sans Condensed', sans-serif;
+
+}
+body{
+    background-image:url("/Users/denise.burnett/projects/unit-4-game/assets/images/pink-1311251_1920.jpg");
+}

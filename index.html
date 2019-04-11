@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+</head>
+
+<body>
+    <div class="card bg-transparent border-0 ">
+        <div class="card-body">
+            <h5 class="card-title">Crystal Collector</h5>
+            <p class="card-text"> You will be given a radom number at the start of the game.</p>
+            <p class="card-text">There are four cyrstals below. By clicking on a crystal you will add a specific amount
+                of points to your total score</p>
+            <p class="card-text">You win the game by matching your total score to the random number, you lose the game
+                if your total
+                score goes above the random number.
+            </p>
+            <p class="card-text">The value of each crystal is hidden from you until you click on it.</p>
+            <p class="card-text">Teach time when the game starts, the game will change the values of each crystal</p>
+        </div>
+    </div>
+    <div class="card bg-transparent border-0 ">
+        <h3 class="card-title">Random Number:</h3>
+        <div class="card mb-4 border-0 bg-transparent" id="random_number">
+        </div>
+    </div>
+    <div class="flex_container">
+        <div>
+            <img src="./assets/images/diamond_1.png" alt="" class="diamond_1">
+        </div>
+        <div>
+            <img src="./assets/images/diamond_2.png" alt="" class="diamond_2">
+        </div>
+        <div>
+            <img src="./assets/images/diamond_3.png" alt="" class="diamond_3">
+        </div>
+        <div>
+            <img src="./assets/images/diamond_4.png" alt="" class="diamond_4">
+        </div>
+    </div>
+    <div class="card bg-transparent border-0 ">
+
+        <h3 class="card-title">Your Total Score:</h3>
+        <div class="card mb-4 border-0 bg-transparent" id="total_score">
+        </div>
+    </div>
+
+
+    <script>
+
+        var counter = 0;
+        $("#total_score").html(counter);
+        // sum = counter.reduce(function (a, b) { return a + b; }, 0);
+        //generate random number and place it in the Random Number div
+
+        var randomNumber = Math.floor(Math.random() * 120) + 19;
+        $("#random_number").append(randomNumber);
+
+        //make each crystal generate a random number
+        var crystalRandom1 = Math.floor(Math.random() * 12) + 1;
+        $(".diamond_1").click(function () {
+            counter += crystalRandom1;
+            console.log("diamond_1  " + crystalRandom1);
+            console.log(counter)
+            $("#total_score").html(counter);
+
+        });
+
+        var crystalRandom2 = Math.floor(Math.random() * 12) + 1;
+        $(".diamond_2").click(function () {
+            counter += crystalRandom2;
+            console.log("diamond_2  " + crystalRandom2);
+            console.log(counter)
+            $("#total_score").html(counter);
+
+        });
+
+        var crystalRandom3 = Math.floor(Math.random() * 12) + 1;
+        $(".diamond_3").click(function () {
+            counter += crystalRandom3;
+            console.log("diamond_3  " + crystalRandom3);
+            console.log(counter)
+            $("#total_score").html(counter);
+
+        });
+
+        var crystalRandom4 = Math.floor(Math.random() * 12) + 1;
+        $(".diamond_4").click(function () {
+            counter += crystalRandom4;
+            console.log("diamond_4  " + crystalRandom4);
+            console.log(counter)
+            $("#total_score").html(counter);
+        });
+
+        //add the crystal numbers and push to the Total Score div
+        // if (counter = [4]) {
+        //  $("#total_score").append(counter);
+        //}
+        console.log(crystalRandom1 + crystalRandom2 + crystalRandom3 + crystalRandom4);
+
+        //confirm if the total meets the random number generated
+
+
+
+
+    </script>
+</body>
+
+</html>
