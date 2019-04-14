@@ -18,104 +18,62 @@
 </head>
 
 <body>
+    <div class="card winsLosses">
+        <div class="card-body">
+            <div>
+                <h5 class="card-title">Wins:</h5>
+                <p class="wins"></p>
+            </div>
+            <div>
+                <h5 class="card-title">Losses:</h5>
+                <p class="losses"></p>
+            </div>
+            <button type="button" class="btn btn-link playAgain">Play Again!</button>
+        </div>
+    </div>
     <div class="card bg-transparent border-0 ">
         <div class="card-body">
-            <h5 class="card-title">Crystal Collector</h5>
-            <p class="card-text"> You will be given a radom number at the start of the game.</p>
-            <p class="card-text">There are four cyrstals below. By clicking on a crystal you will add a specific amount
+            <h3 class="card-title" class="jello-horizontal">Crystal Collector</h3>
+            <p class="card-text"> You will be given a random number at the start of the game.</p>
+            <p class="card-text">There are four cyrstals below. By clicking on a crystal you will add a specific
+                amount
                 of points to your total score</p>
-            <p class="card-text">You win the game by matching your total score to the random number, you lose the game
+            <p class="card-text">You win the game by matching your total score to the random number, you lose the
+                game
                 if your total
                 score goes above the random number.
             </p>
             <p class="card-text">The value of each crystal is hidden from you until you click on it.</p>
-            <p class="card-text">Teach time when the game starts, the game will change the values of each crystal</p>
         </div>
     </div>
+
     <div class="card bg-transparent border-0 ">
-        <h3 class="card-title">Random Number:</h3>
+        <h5 class="card-title">Random Number:</h5>
         <div class="card mb-4 border-0 bg-transparent" id="random_number">
         </div>
     </div>
     <div class="flex_container">
         <div>
-            <img src="./assets/images/diamond_1.png" alt="" class="diamond_1">
+            <img src="./assets/images/diamond_1.png" alt="" class="diamond diamond_1" data-crystal=0>
         </div>
         <div>
-            <img src="./assets/images/diamond_2.png" alt="" class="diamond_2">
+            <img src="./assets/images/diamond_2.png" alt="" class="diamond diamond_2" data-crystal=1>
         </div>
         <div>
-            <img src="./assets/images/diamond_3.png" alt="" class="diamond_3">
+            <img src="./assets/images/diamond_3.png" alt="" class="diamond diamond_3" data-crystal=2>
         </div>
         <div>
-            <img src="./assets/images/diamond_4.png" alt="" class="diamond_4">
+            <img src="./assets/images/diamond_4.png" alt="" class="diamond diamond_4" data-crystal=3>
         </div>
     </div>
     <div class="card bg-transparent border-0 ">
 
-        <h3 class="card-title">Your Total Score:</h3>
+        <h5 class="card-title">Your Total Score Is:</h5>
         <div class="card mb-4 border-0 bg-transparent" id="total_score">
         </div>
     </div>
 
-
-    <script>
-
-        var counter = 0;
-        $("#total_score").html(counter);
-        // sum = counter.reduce(function (a, b) { return a + b; }, 0);
-        //generate random number and place it in the Random Number div
-
-        var randomNumber = Math.floor(Math.random() * 120) + 19;
-        $("#random_number").append(randomNumber);
-
-        //make each crystal generate a random number
-        var crystalRandom1 = Math.floor(Math.random() * 12) + 1;
-        $(".diamond_1").click(function () {
-            counter += crystalRandom1;
-            console.log("diamond_1  " + crystalRandom1);
-            console.log(counter)
-            $("#total_score").html(counter);
-
-        });
-
-        var crystalRandom2 = Math.floor(Math.random() * 12) + 1;
-        $(".diamond_2").click(function () {
-            counter += crystalRandom2;
-            console.log("diamond_2  " + crystalRandom2);
-            console.log(counter)
-            $("#total_score").html(counter);
-
-        });
-
-        var crystalRandom3 = Math.floor(Math.random() * 12) + 1;
-        $(".diamond_3").click(function () {
-            counter += crystalRandom3;
-            console.log("diamond_3  " + crystalRandom3);
-            console.log(counter)
-            $("#total_score").html(counter);
-
-        });
-
-        var crystalRandom4 = Math.floor(Math.random() * 12) + 1;
-        $(".diamond_4").click(function () {
-            counter += crystalRandom4;
-            console.log("diamond_4  " + crystalRandom4);
-            console.log(counter)
-            $("#total_score").html(counter);
-        });
-
-        //add the crystal numbers and push to the Total Score div
-        // if (counter = [4]) {
-        //  $("#total_score").append(counter);
-        //}
-        console.log(crystalRandom1 + crystalRandom2 + crystalRandom3 + crystalRandom4);
-
-        //confirm if the total meets the random number generated
-
-
-
-
+    <script src="./assets/javascript/game.js"></script>
     </script>
 </body>
 
